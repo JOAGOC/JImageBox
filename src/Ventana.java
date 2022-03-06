@@ -26,13 +26,17 @@ public class Ventana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelImageBox2 = new JLabelImageBox();
+        jLabelImageBox1 = new JLabelImageBox();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelImageBox2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo_LogoExample_Header_4_ES.png"))); // NOI18N
-        getContentPane().add(jLabelImageBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 290, 280));
+        jLabelImageBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg"))); // NOI18N
+        getContentPane().add(jLabelImageBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 260, 270));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, 170, 170));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -73,6 +77,7 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private JLabelImageBox jLabelImageBox2;
+    private javax.swing.JLabel jLabel1;
+    private JLabelImageBox jLabelImageBox1;
     // End of variables declaration//GEN-END:variables
 }

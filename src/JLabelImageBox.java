@@ -1,17 +1,11 @@
-
-import java.lang.reflect.Field;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-
 public class JLabelImageBox extends javax.swing.JLabel implements java.io.Serializable {
 
-    private double ratio;
-    private javax.swing.ImageIcon imageIcon;
     private static java.awt.event.ComponentListener l;
+    private double ratio;
+    private java.awt.Image imagen;
 
-    public javax.swing.ImageIcon getImageIcon() {
-        return imageIcon;
+    public java.awt.Image getImagen() {
+        return imagen;
     }
 
     public static void inicializarListener() {
@@ -20,7 +14,7 @@ public class JLabelImageBox extends javax.swing.JLabel implements java.io.Serial
                 @Override
                 public void componentResized(java.awt.event.ComponentEvent e) {
                     JLabelImageBox t = (JLabelImageBox) (e.getComponent());
-                    if (t.getImageIcon() != null) {
+                    if (t.getIcon() != null) {
                         try {
                             int width, height;
                             if (t.getRatio() >= 1) {//Si el ratio es >1 la relación de aspecto es horizontal
@@ -42,7 +36,10 @@ public class JLabelImageBox extends javax.swing.JLabel implements java.io.Serial
                                     width = (int) (height * t.getRatio());
                                 }
                             }
-                            t.setIcon(new javax.swing.ImageIcon(t.getImageIcon().getImage().getScaledInstance(width, height, 4)));
+                            if (width == 0 || height == 0)
+                                return;
+                            //Evitar que el tamaño sea argumento ilegal
+                            t.setIcon(new javax.swing.ImageIcon(t.getImagen().getScaledInstance(width, height, 4)));
                             //Colocar la nueva imágen redimensionada en base a la imágen original
                         } catch (Exception ex) {
                             ex.printStackTrace();
@@ -74,27 +71,14 @@ public class JLabelImageBox extends javax.swing.JLabel implements java.io.Serial
 
     @Override
     public void setIcon(javax.swing.Icon icon) {
-        if (icon == null) {
-            ratio = 0;
-        } else {
-            guardarDatosIniciales(icon);
-        }
-        super.setIcon(icon);
-    }
-
-    private void guardarDatosIniciales(javax.swing.Icon icon) {
-        if (ratio == 0) {
-            ratio = (double) icon.getIconWidth() / (double) icon.getIconHeight();
-            if (icon instanceof javax.swing.ImageIcon) {
-                try {
-                    String xd = ((javax.swing.ImageIcon) icon).getDescription().substring(5);
-                    imageIcon = new javax.swing.ImageIcon(java.awt.Toolkit.getDefaultToolkit().createImage(xd));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        if (icon != null){
+            if (imagen == null){
+                ratio = (double) icon.getIconWidth() / (double) icon.getIconHeight();
+                imagen = ((javax.swing.ImageIcon) icon).getImage();
             }
-        }
-        //Obtener el ratio del ícono
+        } else
+            imagen = null;
+        super.setIcon(icon);
     }
 
     public double getRatio() {
