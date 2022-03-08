@@ -25,18 +25,33 @@ public class Ventana extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jLabelImageBox1 = new JLabelImageBox();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelImageBox2 = new JLabelImageBox();
+        jLabelImageBox3 = new JLabelImageBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jLabelImageBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg"))); // NOI18N
-        getContentPane().add(jLabelImageBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 260, 270));
+        jLabelImageBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1603464187_928337_1603464267_noticia_normal_recorte1.jpg"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        getContentPane().add(jLabelImageBox1, gridBagConstraints);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, 170, 170));
+        jLabelImageBox2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo_LogoExample_Header_4_ES.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        getContentPane().add(jLabelImageBox2, gridBagConstraints);
+
+        jLabelImageBox3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        getContentPane().add(jLabelImageBox3, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -77,7 +92,8 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private JLabelImageBox jLabelImageBox1;
+    private JLabelImageBox jLabelImageBox2;
+    private JLabelImageBox jLabelImageBox3;
     // End of variables declaration//GEN-END:variables
 }
