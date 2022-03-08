@@ -25,33 +25,14 @@ public class Ventana extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        jLabelImageBox1 = new JLabelImageBox();
-        jLabelImageBox2 = new JLabelImageBox();
-        jLabelImageBox3 = new JLabelImageBox();
+        jImageBox1 = new JImageBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jLabelImageBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1603464187_928337_1603464267_noticia_normal_recorte1.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.0;
-        getContentPane().add(jLabelImageBox1, gridBagConstraints);
-
-        jLabelImageBox2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo_LogoExample_Header_4_ES.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.0;
-        getContentPane().add(jLabelImageBox2, gridBagConstraints);
-
-        jLabelImageBox3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        getContentPane().add(jLabelImageBox3, gridBagConstraints);
+        jImageBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1603464187_928337_1603464267_noticia_normal_recorte1.jpg"))); // NOI18N
+        getContentPane().add(jImageBox1, new java.awt.GridBagConstraints());
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -92,8 +73,6 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private JLabelImageBox jLabelImageBox1;
-    private JLabelImageBox jLabelImageBox2;
-    private JLabelImageBox jLabelImageBox3;
+    private JImageBox jImageBox1;
     // End of variables declaration//GEN-END:variables
 }

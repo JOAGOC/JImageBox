@@ -1,4 +1,4 @@
-public class JLabelImageBox extends javax.swing.JLabel implements java.io.Serializable {
+public class JImageBox extends javax.swing.JLabel implements java.io.Serializable {
 
     private static java.awt.event.ComponentListener l;
     private double ratio;
@@ -13,7 +13,7 @@ public class JLabelImageBox extends javax.swing.JLabel implements java.io.Serial
             l = new java.awt.event.ComponentListener() {
                 @Override
                 public void componentResized(java.awt.event.ComponentEvent e) {
-                    JLabelImageBox t = (JLabelImageBox) (e.getComponent());
+                    JImageBox t = (JImageBox) (e.getComponent());
                     if (t.getIcon() != null) {
                         try {
                             int width, height;
@@ -62,7 +62,7 @@ public class JLabelImageBox extends javax.swing.JLabel implements java.io.Serial
         }
     }
 
-    public JLabelImageBox() {
+    public JImageBox() {
         super();
         inicializarListener();
         setHorizontalAlignment(CENTER);
