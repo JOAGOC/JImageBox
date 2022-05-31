@@ -25,6 +25,7 @@ public class Ventana extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jImageBox1 = new JImageBox();
 
@@ -32,7 +33,14 @@ public class Ventana extends javax.swing.JFrame {
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jImageBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1603464187_928337_1603464267_noticia_normal_recorte1.jpg"))); // NOI18N
-        getContentPane().add(jImageBox1, new java.awt.GridBagConstraints());
+        jImageBox1.setPreferredSize(new java.awt.Dimension(250, 250));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        getContentPane().add(jImageBox1, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
