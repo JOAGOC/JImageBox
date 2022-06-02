@@ -3,6 +3,7 @@ public class JImageBox extends javax.swing.JLabel implements java.io.Serializabl
     private static java.awt.event.ComponentListener l;
     private double ratio;
     private java.awt.Image imagen;
+    private boolean comesFromResize = false;
 
     public java.awt.Image getImagen() {
         return imagen;
@@ -39,6 +40,7 @@ public class JImageBox extends javax.swing.JLabel implements java.io.Serializabl
                             if (width == 0 || height == 0)
                                 return;
                             //Evitar que el tamaño sea argumento ilegal
+                            t.comesFromResize = true;
                             t.setIcon(new javax.swing.ImageIcon(t.getImagen().getScaledInstance(width, height, 4)));
                             //Colocar la nueva imágen redimensionada en base a la imágen original
                         } catch (Exception ex) {
@@ -72,7 +74,7 @@ public class JImageBox extends javax.swing.JLabel implements java.io.Serializabl
     @Override
     public void setIcon(javax.swing.Icon icon) {
         if (icon != null){
-            if (imagen == null){
+            if (imagen == null || (comesFromResize = !comesFromResize)){
                 ratio = (double) icon.getIconWidth() / (double) icon.getIconHeight();
                 imagen = ((javax.swing.ImageIcon) icon).getImage();
             }
