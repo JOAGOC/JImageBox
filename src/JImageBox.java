@@ -1,9 +1,21 @@
+
+import javax.swing.JFrame;
+
 public class JImageBox extends javax.swing.JLabel implements java.io.Serializable {
 
     private static java.awt.event.ComponentListener l;
     private double ratio;
     private java.awt.Image imagen;
     private boolean comesFromResize = false;
+    
+    public static void main(String[] args) {
+        JFrame f = new JFrame();
+        JImageBox i = new JImageBox();
+        i.setIcon(new javax.swing.ImageIcon(i.getClass().getResource("/Example1.png")));
+        f.add(i);
+        f.setSize(400,400);
+        f.setVisible(true);
+    }
 
     public java.awt.Image getImagen() {
         return imagen;
